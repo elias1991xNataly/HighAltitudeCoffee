@@ -1,13 +1,657 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    height: 100vw;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.description .novelty .faq .cometous .contactus footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*-------------------------------------------------NAV-----------------------------------*/
+
+
+/*-------------------------------------------------DESCRIPTION-----------------------------------*/
+#model {
+    /* height: 50px; */
+    width: 600px;
+}
+
+#shop {
+    background-color: #2A5B45;
+    color: white;
+    width: 168px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+}
+
+#origin {
+    background-color: #1F1815;
+    color: #FFFFFF;
+    width: 168px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    flex-basis: content;
+    height: 500px;
+    background: #E3DED74D 30%;
+    padding: 48px 20px 48px 40px;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F5F3;
+
+}
+
+
+.origin {
+    display: flex;
+    gap: 8px;
+}
+
+
+
+
+
+
+.declaration,
+#model {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: inherit;
+    overflow-wrap: normal;
+    align-items: flex-start;
+
+
+
+}
+
+.declaration {
+    font-size: 40px;
+    width: fit-content;
+    block-size: fit-content;
+}
+
+
+
+
+#title {
+    left: 18px;
+    color: green;
+}
+
+
+
+
+
+/*------------------------------------------------COFFECARDS------------------------------*/
+
+
+article.coffeecardsconditions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* height: 486px; */
+    padding: 48px 40px;
+    width: 40px;
+    left: 10px;
+    flex: content;
+    column-gap: 16px;
+    justify-content: space-evenly;
+}
+
+
+.buttonforbuying {
+    width: 64px;
+    height: 64px;
+    background-color: #2A5B45;
+    border-radius: 20px;
+    border: #FFFFFF;
+}
+
+
+
+
+/* left: 10px; */
+/* column-gap: 24px; */
+
+
+/*importante*/
+div.coffeecard {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    padding: 24px;
+}
+
+
+
+.coffeecards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: flex-start;
+    background-image: url(https://s3-alpha-sig.figma.com/img/03a7/c79a/086aa1e226e5adfe010fd0fb3ff3e2cb?Expires=1685318400&Signature=CAlTit-JRAZrKabAm3GraaDpYhg3X0NGEEiH3QjpG96AmlsdEuz1H4N3ZFr-Y7uhCN-Ow7QXE20v18NxhYYx53i7koCVJUVRrLJ7llo8WvKunZequToJotQtdJ5WtH7PJeoImwJD2SbHN3v2wznyD10Pwg6f5qcc6nd4Q9KE6V-hBi0MVRuiudWWJyKpCBU3sPybGZt0dVlOFTKZFD6vnOkfSOIwnKozq3Rcx5uf1DrwFTm3botGQOe2xrpk-9w2l46CLbHpQiKQpaHEm8F5B-ydPB1pSWTtEU1Uvg2cfX94pvXdpj1ur8ONvGa71v1YeObFg4gbb7xBMd8LNwPl1g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position: center center;
+    min-height: 60vh;
+    padding: 40px;
+    align-content: center;
+    flex-direction: row;
+
+}
+
+/*------------------------------------------novelty-------------------------------------*/
+.novelty {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* height: 486px; */
+    align-content: center;
+    align-items: baseline;
+    margin: 40px;
+}
+
+.products:hover {
+    background-color: #F7F5F3;
+}
+
+.products:hover .addButton {
+    background: #2A5B45
+}
+
+.tag {
+    top: -200px;
+    position: relative;
+}
+
+.imageSetUp {
+    margin-top: 24px;
+}
+
+.noveltyText {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 44px;
+
+
+}
+
+.addButton {
+    /* background-color: #2A5B45; */
+    color: white;
+    border-radius: 4px;
+    background: rgba(42, 91, 69, 0.7);
+    border-color: rgba(42, 91, 69, 0.7);
+    border: none;
+    padding: 8px;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+
+
+
+.noveltyButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    text-decoration: underline;
+    color: black;
+    gap: 10px;
+    margin-bottom: 48px;
+
+}
+
+div.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 282px;
+    /* height: auto; */
+    border: 1px solid #EDEAE6;
+    gap: 24px;
+}
+
+section.novedades {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    height: 348px;
+}
+
+
+/* #cofehero {
+
+} */
+
+
+
+.coffeecardsText {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    line-height: 44px;
+    width: 1288px;
+
+
+}
+
+
+
+
+
+
+/*-------------------------------------------------------FAQS-----------------------------------------*/
+.divider {
+    width: 620px;
+    border: 1px solid #E3DED7;
+    background-color: #F7F5F3;
+    border-radius: 10px;
+    padding: 24px;
+    margin: 16px;
+    /* height: 132px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resolveDoubts {
+    gap: 10px;
+    color: #FFFFFF;
+    display: flex;
+    margin-bottom: 52px;
+    margin-top: 12px;
+    outline-color: #5F8474;
+}
+
+
+/* .Contactus, aside{
+    display: flex;
+} */
+
+
+.faq {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2A5B45;
+}
+
+/* aqui hago los divs expandibles*/
+button.accordion {
+    background-color: #F7F5F3;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    height: 50px;
+
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #E3DED7;
+    margin-top: 16px;
+}
+
+button.accordion.active,
+button.accordion:hover {
+    background-color: #F7F5F3;
+}
+
+button.accordion>h2:after {
+    /* content: url(../images/Chevronup.png); */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+
+}
+
+button.accordion.active>h2:after {
+    /* content: url(../images/Chevrondown.png); */
+    position: relative;
+    margin-top: 10px;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: #F7F5F3;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+
+/*--------------------------------------------COFFE SHOP---------------------*/
+.cometous {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* padding: 48px 40px; */
+    align-items: center;
+    flex-grow: 1;
+}
+
+.blockInfoCoffe {
+    width: 45%;
+}
+
+#ourshopinthemid {
+    width: 510px;
+    block-size: fit-content;
+}
+
+#tryit {
+    color: #376450;
+}
+
+#reachus {
+    color: #3E3D3D;
+    gap: 10px;
+    display: flex;
+
+}
+
+#padding {
+    padding: 48px 40px;
+}
+
+.visitUs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    width: 588px;
+}
+
+
+#cofehero {
+    border-radius: 20px;
+    flex-grow: 1;
+    padding: 48px 40px 48px 0px;
+}
+
+.visitUs {
+    width: 400px;
+}
+
+/*----------------------------------------FORM----------------------------------*/
+section.contactus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    gap: 24px;
+    background-color: #E3DED7;
+    flex-wrap: nowrap;
+}
+
+
+
+#ourOffers {
+    color: #1F1815;
+    font-weight: bolder;
+}
+
+.contactInfo {
+    background-color: #E3DED7;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: 116px;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: 510px; */
+    flex-grow: 1;
+}
+
+.form {
+    height: 552px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 24px;
+    justify-content: center;
+    padding: 32px 32px 32px 48px;
+    gap: 24px;
+    margin-right: 40px;
+    justify-content: space-evenly;
+    background-color: #FCFCFB;
+    flex-grow: 1;
+    width: 37%;
+}
+
+
+#strong {
+    text-decoration: underline;
+}
+
+.nameForm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.telephoneForm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#numbersPhone {
+    width: 92%;
+    flex-grow: 1;
+}
+
+#termsandConditions {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#textareaForm {
+    width: 100%;
+    flex-grow: 1;
+}
+
+#buttonForm {
+    width: 90px;
+    height: 40px;
+    background-color: #376450;
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+
+.checkForm {
+    text-decoration: none;
+}
+
+
+/*------------------------------------------------------------FOOTER----------------------------*/
+/*eventlisteners, web storages, */
+.firstPartOfFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#footer {
+    width: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 100px;
+
+}
+
+
+/* #copyrightfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #2B2A2B;
+    color: #E9E9E9;
+}
+ */
+
+
+#identity {
+    padding: 40px;
+}
+
+.waysOfContact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+#wehelpyou {
+    color: white;
+
+}
+
+.directionsAndTerms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 425px;
+}
+
+.logo a:hover {
+    color: white;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.logo {
+    color: white;
+    margin: 0px;
+    text-decoration: none;
+}
+
+#footerlogo {
+    gap: 3px;
+}
+
+a.logo {
+    margin: 10px;
+}
+
+a.logo:link {
+    text-decoration: none;
+}
+
+.directions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 16px;
+
+
+
+}
+
+
+.terms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    flex-wrap: wrap;
+    bottom: 40px;
+    position: relative;
+
+}
+
+.terms a {
+    text-decoration: none;
+}
+
+#email {
+    width: 232px;
+    border-radius: 4px;
+}
+
+.contact {
+    color: #DEDEDE;
+    background-color: #515051;
+}
+
+
+#phone {
+    width: 182px;
+    border-radius: 4px;
 }
