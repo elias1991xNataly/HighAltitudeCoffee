@@ -1,60 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../Context/Cart_context';
+import SendOptions from '../SendOptions/SendOptions';
+import Cart_Breakdown from '../Cart_Breakdown/Cart_Breakdown';
+import CkeckoutAndKeepBuying from '../CkeckoutAndKeepBuying/CkeckoutAndKeepBuying';
 
 const Cart_Section = () => {
 
-// const{cartCoffee,setCartCoffee,increaseQuantity,DecreaseQuantity}
-
+	const { cartCoffee, setQuantity, sumQuantityOfCoffee, restQuantityOfCoffee, lengthOfCoffeesInCart } = useContext(CartContext)
+	const [count, setCount] = useState(0);
 
 
 	return (<section className="cartForShopping">
-		<div className="cartTitle">
-			<h2 id="numberItems">Cesta (0)</h2>
-		</div>
 		<div className="productsInCartDescription">
-			<div className="productsInCart">
-				<h3 id="products">Productos</h3>
-				<div className="chooseSendingOption">
-					<h3>Seleccionar Envío</h3>
-					<div className="quantity">
-						<div id="amount">
-							<input type="radio"/>
-								<p><button id="rangeOfSending">Envío 5-7 días</button></p>
-								<span> Opción estándar sin seguimiento</span>
-						</div>
-						<div><img src="/images/5,00 €.png" alt=""/></div>
-					</div>
+			<h2 id="numberItems" className='flex justify-center text-custom-green font-bold'>Cesta ({lengthOfCoffeesInCart()})</h2>
+			<div className="productsInCart flex justify-evenly">
+				<div className='space-y-6'>
+					{console.log(cartCoffee)}
+					<h3 id="products" className='font-bold'>Productos</h3>
+					{cartCoffee.map((coffee, key) => {
+						return (<div id={key} className='flex w-fit flex-row border-b-2 place-items-center p-3 m-3'>
+							<p className=' flex place-items-center gap-3'>
+								<button onClick={() => { restQuantityOfCoffee(coffee) }}>-</button>
+								<p className='w-6 h-6 rounded-full bg-custom-graylighter flex justify-center'>{coffee.quantity}</p>
+
+								<button onClick={() => { sumQuantityOfCoffee(coffee) }}>+</button>
+								<img className='w-14 h-14' src={coffee.img} />
+								<div className=''>
+									<p className='' >{coffee.name}</p>
+									<p >Paquete de café, 250gr</p>
+								</div>
+
+							</p>
+							<div className='pl-96'>
+								<p className='font-bold'>{coffee.price * coffee.quantity},00 €</p>
+							</div>
+						</div>)
+					})}
+					<SendOptions />
 				</div>
-				<div></div>
-				<div className="totalOfCart">
-					<h3>Total del Carrito</h3>
-					<div className="line"></div>
-					<div className="subtotalInEuros">
-						<p>SUBTOTAL</p>
-						<p className="amount" id="amountOfSubtotal"></p>
-					</div>
-					<div className="subtotalInEuros">
-						<p>ENVIO</p>
-						<p className="amount" id="amountOfSend"></p>
-					</div>
-					<div className="line"></div>
-					<div className="TotalInEuros">
-						<h3 >TOTAL</h3>
-						<p className="amount" id="amountOfTotal"></p>
-					</div>
-					<div className="subtotalInEuros">
-						<p></p>
-						<p className="amount" id="vat"></p>
-					</div>
-					<div className="goCheckout">
-						<Link to="/Checkout"> <button id="goCheckoutButton">Ir a checkout</button></Link>
-						<button id="buyMore"><Link to="/shop">Seguir comprando</Link></button>
-					</div>
+				<div>
 				</div>
 			</div>
-			</div>
+		</div>
 	</section>)
 }
 

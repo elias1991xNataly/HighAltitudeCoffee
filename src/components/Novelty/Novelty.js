@@ -11,7 +11,7 @@ import { db } from '../../firebase/config';
 const Novelty = () => {
 	const coffeeUrl = "http://localhost:5050/coffee";
 	const [coffee, setCoffee] = useState();
-	const { cartCoffee,addToCart } = useContext(CartContext);
+	let {cartCoffee, addToCartIfItsNoRepeated, setCartCoffee } = useContext(CartContext);
 
 	const getData = async () => {
 		const coffees = []
@@ -36,16 +36,16 @@ const Novelty = () => {
 
 
 
-	return (<div><h2 className="noveltyText">Novedades</h2>
+	return (<div className='p-10'><h2 className="noveltyText text-custom-green  font-bold">Novedades</h2>
 		<section className="novelty">
+			{console.log(coffee)}
 			{
-
-				coffee?.slice(0, 4).map(coffe => (<div className='products'>
+				coffee?.slice(0, 4).map((coffe, key) => (<div className='products' id={key}>
 					<img src={coffe.image} alt="" className='imageSetUp' />
 					<h2 className='nameOfCoffee'>{coffe.name}</h2>
 
 					<p className='priceOfCoffee'>{coffe.price},00€</p>
-					<button className="addButton" onClick={() => addToCart({ name: coffe.name, id: coffe, img: coffe.img, price: coffe.price })}>Añadir</button>
+					<button className="addButton" onClick={() => addToCartIfItsNoRepeated({ name: coffe.name, id: coffe.id, img: coffe.image, price: coffe.price, quantity: 1 })}>Añadir</button>
 				</div>
 				))
 
@@ -53,10 +53,14 @@ const Novelty = () => {
 
 
 			}
-{console.log(cartCoffee)}
+			{console.log(cartCoffee)}
 		</section>
 		{/* <!-- <a href="#" className="noveltyButton">Ver todos<img className="arrowSetup" src="./images/Icon (2).svg"/></a> --> */}
-		<Link path="/shop" className="noveltyButton">Ver todos<img src="./images/Icon (2).svg" /></Link>
+		<Link to="/shop" className="noveltyButton">Ver todos<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+</svg>
+</Link>
+		
 
 	</div>)
 }

@@ -1,14 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Faqs = ()=>{
+const Faqs = () => {
 
-	return(<section>
-		<h2>Preguntas frecuentes</h2>
-		<div> <button className="accordion">
-                <h2>¿Cómo hago el pedido?
-                </h2>
-            </button>
+
+    
+const divcollapse1 = document.getElementsByClassName("accordion");
+for (let y = 0; y < divcollapse1.length; y++) {
+    divcollapse1[y].onclick = function () {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+
+}
+
+    return (<section className='bg-custom-green flex flex-col items-center p-6'>
+        <h2 className='text-white'>Preguntas frecuentes</h2>
+        <div className="divider">  <button className="accordion" >
+            <h2>¿Cómo hago el pedido?
+            </h2>
+        </button>
             <div className="panel">
                 <div className="line"></div>
                 <p className="textexpand1"> Selecciona el café que desees probar y completa el proceso de compra. Si lo
@@ -16,8 +27,8 @@ const Faqs = ()=>{
                     preguntaremos
                     cada cuánto quieres que te lo mandemos a casa y así nunca te quedarás sin café.</p>
             </div>
-		</div>
-		<div className="divider">
+        </div>
+        <div className="divider">
             <button className="accordion">
                 <h2>¿Por qué los precios son tan bajos?</h2>
             </button>
@@ -32,16 +43,21 @@ const Faqs = ()=>{
                     beneficio posible.</p>
             </div>
         </div>
-		<div className="divider">
+        <div className="divider">
             <button className="accordion">
-                <h2>¿Es posible enviar café a mi oficina?<img src="./images/Icon(8).jpg" alt=""/></h2>
+                <h2>¿Es posible enviar café a mi oficina?<img src="./images/Icon(8).jpg" alt="" /></h2>
             </button>
+            <div className="panel">
+                <div className="line"></div>
+                <p className="textexpand1">
+                  </p>
+            </div>
         </div>
         <div className="resolveDoubts">
-            <Link to="/" className="resolveDoubts">Resolvemos tus dudas</Link>
+            <Link to="/" className="resolveDoubts underline">Resolvemos tus dudas<img src="./images/Arrow_narrow-right.png" alt="" /> </Link>
         </div>
-	</section>
-	)
+    </section>
+    )
 }
 
 

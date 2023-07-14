@@ -6,13 +6,13 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
-import { CartContext } from '../../Context/Cart_context';
+import CoffeeCart, { CartContext } from '../../Context/Cart_context';
 
 
 const Last_Origins = () => {
 	const coffeeUrl = "http://localhost:5050/coffee";
 	const [coffee, setCoffee] = useState();
-	let { quantity,setQuantity, cartCoffee, addToCart } = useContext(CartContext);
+	let { cartCoffee, addToCartIfItsNoRepeated, setCartCoffee } = useContext(CartContext);
 
 	const getData = async () => {
 		const coffees = []
@@ -32,47 +32,48 @@ const Last_Origins = () => {
 	}, [])
 
 
+	// let QuantityHandler = [];
+	// cartCoffee.forEach(element => {
+
+	// })
+
+
+
+
 
 	return (
-		<div className='flex flex-col'>
-			<h2 className='noveltyText'>Novedades</h2>
-			<div className='flex'>
+		<div className='flex flex-col space-y-6 p-10'>
+			<h2 className='noveltyText text-custom-green text-bold position-absolute' id="title">Últimos orígenes</h2>
+			<div className='flex items-center justify-center space-x-6'>
 				{console.log(coffee)}
 
 				{
-					coffee?.slice(0, 4).map(coffe => (<div className='products'>
+					coffee?.slice(0, 4).map((coffe, key) => (<div className='products' id={key}>
 						<img src={coffe.image} alt="" className='imageSetUp' />
 						<h2 className='nameOfCoffee'>{coffe.name}</h2>
 
-						<p className='priceOfCoffee'>{coffe.price},00€</p>
-						<button className="addButton" onClick={() => addToCart({ name: coffe.name, id: coffe, img: coffe.img, price: coffe.price })}>Añadir</button>
+						<p className='priceOfCoffee'>{coffe.price},00 €</p>
+						<button className="addButton" onClick={() => addToCartIfItsNoRepeated({ name: coffe.name, id: coffe.id, img: coffe.image, price: coffe.price, quantity: 1 })}>Añadir</button>
 					</div>
 					))
 				}
 			</div>
-			<div className='flex'>
-
+			<div className='flex justify-center space-x-6'>
+				{console.log(CoffeeCart)}
 				{
-					coffee?.slice(4, 8).map(coffe => (<div className='products'>
+					coffee?.slice(4, 8).map((coffe, key) => (<div className='products'>
 						<img src={coffe.image} alt="" className='imageSetUp' />
 						<h2 className='nameOfCoffee'>{coffe.name}</h2>
 
-						<p className='priceOfCoffee'>{coffe.price},00€</p>
-						<button className="addButton" onClick={() => addToCart({ name: coffe.name, id: coffe, img: coffe.img, price: coffe.price, quantity: `${quantity += 1}` })}>Añadir</button>
+						<p className='priceOfCoffee'>{coffe.price},00 €</p>
+						<button className="addButton" onClick={() => addToCartIfItsNoRepeated({ name: coffe.name, id: coffe.id, img: coffe.image, price: coffe.price, quantity: 1 })}>Añadir</button>
 					</div>
 					))
 				}
 				{console.log(cartCoffee)}
 			</div>
 		</div>)
-	/* {
-				coffee?.map(coffe => (<div>
-					<p>{coffe.name}</p>
-	
-					<p>{coffe.price}</p>
-					<img src={coffe.image} alt="" />
-				</div>))
-			} */
+
 }
 
 
