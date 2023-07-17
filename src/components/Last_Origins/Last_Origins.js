@@ -50,7 +50,7 @@ const Last_Origins = () => {
 				{
 					coffee?.slice(0, 4).map((coffe, key) => (<div className='products' id={key}>
 						<img src={coffe.image} alt="" className='imageSetUp' />
-						<h2 className='nameOfCoffee'>{coffe.name}</h2>
+						<h2 className='nameOfCoffee'><b>{coffe.name}</b></h2>
 
 						<p className='priceOfCoffee'>{coffe.price},00 €</p>
 						<button className="addButton" onClick={() => addToCartIfItsNoRepeated({ name: coffe.name, id: coffe.id, img: coffe.image, price: coffe.price, quantity: 1 })}>Añadir</button>

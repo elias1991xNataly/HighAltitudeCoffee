@@ -36,13 +36,13 @@ const Novelty = () => {
 
 
 
-	return (<div className='p-10'><h2 className="noveltyText text-custom-green  font-bold">Novedades</h2>
+	return (<div className='p-10'><h2 className="noveltyText text-custom-green  font-bold text-2xl">Novedades</h2>
 		<section className="novelty">
 			{console.log(coffee)}
 			{
 				coffee?.slice(0, 4).map((coffe, key) => (<div className='products' id={key}>
 					<img src={coffe.image} alt="" className='imageSetUp' />
-					<h2 className='nameOfCoffee'>{coffe.name}</h2>
+					<h1 className='nameOfCoffee'><b>{coffe.name}</b></h1>
 
 					<p className='priceOfCoffee'>{coffe.price},00€</p>
 					<button className="addButton" onClick={() => addToCartIfItsNoRepeated({ name: coffe.name, id: coffe.id, img: coffe.image, price: coffe.price, quantity: 1 })}>Añadir</button>

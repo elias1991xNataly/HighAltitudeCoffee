@@ -28,7 +28,7 @@ const Cart_Section = () => {
 								<button onClick={() => { sumQuantityOfCoffee(coffee) }}>+</button>
 								<img className='w-14 h-14' src={coffee.img} />
 								<div className=''>
-									<p className='' >{coffee.name}</p>
+									<h2 className='font-bold' >{coffee.name}</h2>
 									<p >Paquete de café, 250gr</p>
 								</div>
 

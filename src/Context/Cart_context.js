@@ -27,7 +27,7 @@ export default function CoffeeCart({ children }) {
     const totalCart = () => {
         let total = 0;
 
-       
+
         total = +sumPriceOfAllCoffees() + +typeShipment
         return total
     }
@@ -36,8 +36,8 @@ export default function CoffeeCart({ children }) {
     //----------number of articles in Cart---------------------
 
     const lengthOfCoffeesInCart = () => {
-        let length=0;
-        cartCoffee.map((coffee)=>length+=coffee.quantity)
+        let length = 0;
+        cartCoffee.map((coffee) => length += coffee.quantity)
         return length
     }
 
@@ -73,10 +73,10 @@ export default function CoffeeCart({ children }) {
                 cartItem.quantity >= 1 ? cartItem.quantity -= 1 : cartItem.quantity = 0
                 setCartCoffee([...cartCoffee]);
             }
-            if (cartItem.quantity==0) {
+            if (cartItem.quantity == 0) {
                 deleteFromCart(coffeSelect)
             }
-           
+
         }
         )
     }
@@ -94,10 +94,13 @@ export default function CoffeeCart({ children }) {
         const newCart = cartCoffee.filter(coffeeDel => coffeeDel !== coffee)
         setCartCoffee(newCart)
     }
-
+    const clearCart = () => {
+        let cartEmpty = [];
+        setCartCoffee(cartEmpty)
+    }
 
     return (
-        <CartContext.Provider value={{ cartCoffee, setCartCoffee,isCoffeRepeated,addToCartIfItsNoRepeated,totalCart,lengthOfCoffeesInCart,sumPriceOfAllCoffees,sumQuantityOfCoffee,restQuantityOfCoffee,onShipmentValue,deleteFromCart,typeShipment,setTypeShipment  }} >
+        <CartContext.Provider value={{ cartCoffee, setCartCoffee, isCoffeRepeated, addToCartIfItsNoRepeated, totalCart, lengthOfCoffeesInCart, sumPriceOfAllCoffees, sumQuantityOfCoffee, restQuantityOfCoffee, onShipmentValue, deleteFromCart, clearCart, typeShipment, setTypeShipment, }} >
             {children}
         </CartContext.Provider>
     )

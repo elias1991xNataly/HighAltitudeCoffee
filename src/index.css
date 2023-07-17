@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700;900&display=swap');
 html,
 body {
     margin: 0;
@@ -53,7 +56,7 @@ body {
     background: #E3DED74D 30%;
     padding: 48px 20px 48px 40px;
     gap: 8px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     background-color: #F7F5F3;
 
@@ -168,7 +171,6 @@ div.coffeecard {
     min-height: 60vh;
     padding: 40px;
     align-content: center;
-    flex-direction: row;
 
 }
 
@@ -282,7 +284,7 @@ section.novedades {
 
 /*-------------------------------------------------------FAQS-----------------------------------------*/
 .divider {
-    width: 620px;
+    /* width: 1300px; */
     border: 1px solid #E3DED7;
     background-color: #F7F5F3;
     border-radius: 10px;
@@ -291,7 +293,7 @@ section.novedades {
     /* height: 132px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .resolveDoubts {
@@ -325,7 +327,7 @@ button.accordion {
     background-color: #F7F5F3;
     color: #444;
     cursor: pointer;
-    width: 50%;
+    
     border: none;
     text-align: left;
     outline: none;
