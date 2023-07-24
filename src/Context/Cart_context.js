@@ -5,7 +5,6 @@ export const CartContext = createContext();
 export default function CoffeeCart({ children }) {
 
     const [cartCoffee, setCartCoffee] = useState([]);
-    const [quantity, setQuantity] = useState();
 
     //-----------AddCart coffees no repeat---------------------
 
@@ -56,7 +55,7 @@ export default function CoffeeCart({ children }) {
 
     //?---SUM---------------------
     const sumQuantityOfCoffee = (coffeSelect) => {
-        cartCoffee.map((cartItem) => {
+        cartCoffee.forEach((cartItem) => {
             if (cartItem.name === coffeSelect.name) {
                 cartItem.quantity += 1;
                 setCartCoffee([...cartCoffee]);
@@ -68,12 +67,12 @@ export default function CoffeeCart({ children }) {
 
     //?---Rest---------------------
     const restQuantityOfCoffee = (coffeSelect) => {
-        cartCoffee.map((cartItem) => {
+        cartCoffee.forEach((cartItem) => {
             if (cartItem.name === coffeSelect.name) {
                 cartItem.quantity >= 1 ? cartItem.quantity -= 1 : cartItem.quantity = 0
                 setCartCoffee([...cartCoffee]);
             }
-            if (cartItem.quantity == 0) {
+            if (cartItem.quantity === 0) {
                 deleteFromCart(coffeSelect)
             }
 

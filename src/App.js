@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Shop from "./Parent_components/Shop/Shop";
-import NavBar from './components/NavBar/NavBar';
 import Cart from './Parent_components/Cart/Cart';
 import Main from "./Parent_components/Main/Main";
 import "../src/index.css";
 import Success from './Parent_components/Success/Success';
 import Checkout from './Parent_components/Checkout';
-import CoffeeCart, { Cart_context } from '../src/Context/Cart_context';
+import CoffeeCart from '../src/Context/Cart_context';
 
 function App() {
 

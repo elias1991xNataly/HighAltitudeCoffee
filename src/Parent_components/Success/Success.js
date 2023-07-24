@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "../../components/NavBar/NavBar"
-import Success_section from '../../components/Success_section/Success_section';
+import SuccessSection from '../../components/Success_section/Success_section';
 import CopyRight from '../../components/CopyRight/CopyRight';
 
 const Success = () => {
@@ -10,7 +10,7 @@ const Success = () => {
 
 	return (<div>
 		<Navbar />
-		<Success_section />
+		<SuccessSection />
 		<div className='top-96 relative'>
 
 			<CopyRight />

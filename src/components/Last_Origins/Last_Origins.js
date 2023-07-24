@@ -9,7 +9,7 @@ import { useContext } from 'react';
 import CoffeeCart, { CartContext } from '../../Context/Cart_context';
 
 
-const Last_Origins = () => {
+const LastOrigins = () => {
 	const coffeeUrl = "http://localhost:5050/coffee";
 	const [coffee, setCoffee] = useState();
 	let { cartCoffee, addToCartIfItsNoRepeated, setCartCoffee } = useContext(CartContext);
@@ -63,7 +63,7 @@ const Last_Origins = () => {
 				{
 					coffee?.slice(4, 8).map((coffe, key) => (<div className='products'>
 						<img src={coffe.image} alt="" className='imageSetUp' />
-						<h2 className='nameOfCoffee'>{coffe.name}</h2>
+						<h2 className='nameOfCoffee font-bold'>{coffe.name}</h2>
 
 						<p className='priceOfCoffee'>{coffe.price},00 €</p>
 						<button className="addButton" onClick={() => addToCartIfItsNoRepeated({ name: coffe.name, id: coffe.id, img: coffe.image, price: coffe.price, quantity: 1 })}>Añadir</button>
@@ -77,4 +77,4 @@ const Last_Origins = () => {
 }
 
 
-export default Last_Origins;
+export default LastOrigins;

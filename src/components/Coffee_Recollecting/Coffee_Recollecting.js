@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Coffee_Recollecting = () => {
+const CoffeeRecollecting = () => {
     return (
         <section className="p-10 flex justify-between">
             <div className='flex flex-col justify-center items-center self-stretch '>
@@ -32,4 +32,4 @@ const Coffee_Recollecting = () => {
     )
 }
 
-export default Coffee_Recollecting;
+export default CoffeeRecollecting;

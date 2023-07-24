@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const Coffee_Shop = () => {
+const CoffeeShop = () => {
 	return (<section className="cometous flex justify-between py-12">
 		<div className="blockInfoCoffe space-y-6" id="padding">
 			<h2 id="tryit" className='text-custom-green font-500 text-2xl'>Pruébalo en nuestro coffee shop</h2>
@@ -18,7 +18,7 @@ const Coffee_Shop = () => {
 			</div>
 		</div>
 		<div className="relative w-6/12 justify-end mr-10">
-			<img src="https://s3-alpha-sig.figma.com/img/4570/2d93/af83409b898246e822c86278c804fd4c?Expires=1690156800&Signature=R-z5K17PGdmLqSpzfSS54L9cNTncvN78sM1EMwegKBfCu95Hiu4Lck87KuFFAnjS6UMH7pqRqv14y~Dfr20-cSsibetuLxrmzK7yqNv9TXzY4p-QrmoKJCm3GNC4vJuqo~voyLTWRrZPlTFlqyRDH4GgHR68Bvv1~HJtbMEOBLntkxPk~5czMNdVoZxA4L0flm1fhU5d1WFVPVs6fYGInpUjRaiSnwu4Jo2Tsw23bOZOT7mMKCzjkJMfxHKiH6ztD3hZtZp5WvGtXaCsmhHfKNfoy02iSn4PyKMxjQHuKkuSAaG7fmeyLyc8zVxA3g4g0IRiRuuqJovFNBTs37TCLA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" className="relative rounded-[20px] flex  "/>
+			<img src="https://s3-alpha-sig.figma.com/img/4570/2d93/af83409b898246e822c86278c804fd4c?Expires=1690156800&Signature=R-z5K17PGdmLqSpzfSS54L9cNTncvN78sM1EMwegKBfCu95Hiu4Lck87KuFFAnjS6UMH7pqRqv14y~Dfr20-cSsibetuLxrmzK7yqNv9TXzY4p-QrmoKJCm3GNC4vJuqo~voyLTWRrZPlTFlqyRDH4GgHR68Bvv1~HJtbMEOBLntkxPk~5czMNdVoZxA4L0flm1fhU5d1WFVPVs6fYGInpUjRaiSnwu4Jo2Tsw23bOZOT7mMKCzjkJMfxHKiH6ztD3hZtZp5WvGtXaCsmhHfKNfoy02iSn4PyKMxjQHuKkuSAaG7fmeyLyc8zVxA3g4g0IRiRuuqJovFNBTs37TCLA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" className="relative rounded-[20px] flex justify-end self-stretch "/>
 		</div>
 		{/* <!-- <a href="#" className="noveltyButton">Ver todos<img className="arrowSetup" src="./images/Icon (2).svg"/></a> --> */}
 
@@ -27,4 +27,4 @@ const Coffee_Shop = () => {
 }
 
 
-export default Coffee_Shop;
+export default CoffeeShop;

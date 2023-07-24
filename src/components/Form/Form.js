@@ -61,9 +61,9 @@ const Form = () => {
 			</div>
 			<div className="checkTerms">
 				<input type="checkbox" name="checkForm" id="checkForm" value="acept" />
-				<label for="checkForm"><a id="termsandConditions" href="#">Acepto la <span id="strong">Política de
+				<label for="checkForm"><Link id="termsandConditions" to="/">Acepto la <span id="strong">Política de
 					Privacidad</span> y
-					los <span id="strong">Términos y condiciones.</span></a></label>
+					los <span id="strong">Términos y condiciones.</span></Link></label>
 			</div>
 			<button type="submit" id="buttonForm">Enviar</button>
 		</form>

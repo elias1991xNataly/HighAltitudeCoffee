@@ -9,7 +9,7 @@ const Footer = () => {
 			<div id="footer" className='flex bg-custom-black content-around position-relative space-x-6'>
 				<div className="waysOfContact flex-col" id="identity">
 					<div>
-						<p className="logo flex items-center" id="footerlogo" >cafedealtura.com<img src="./images/ps_coffee-hot.png" /></p>
+						<p className="logo flex items-center" id="footerlogo" >cafedealtura.com<img src="./images/ps_coffee-hot.png" alt=""/></p>
 					</div>
 					<h3 id="wehelpyou">Te ayudamos en</h3>
 					<div className="waysOfContact">

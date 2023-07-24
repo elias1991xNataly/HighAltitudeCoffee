@@ -1,15 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../Context/Cart_context';
 import SendOptions from '../SendOptions/SendOptions';
-import Cart_Breakdown from '../Cart_Breakdown/Cart_Breakdown';
-import CkeckoutAndKeepBuying from '../CkeckoutAndKeepBuying/CkeckoutAndKeepBuying';
 
-const Cart_Section = () => {
+const CartSection = () => {
 
-	const { cartCoffee, setQuantity, sumQuantityOfCoffee, restQuantityOfCoffee, lengthOfCoffeesInCart } = useContext(CartContext)
-	const [count, setCount] = useState(0);
+	const { cartCoffee, sumQuantityOfCoffee, restQuantityOfCoffee, lengthOfCoffeesInCart } = useContext(CartContext)
 
 
 	return (<section className="cartForShopping">
@@ -26,7 +22,7 @@ const Cart_Section = () => {
 								<p className='w-6 h-6 rounded-full bg-custom-graylighter flex justify-center'>{coffee.quantity}</p>
 
 								<button onClick={() => { sumQuantityOfCoffee(coffee) }}>+</button>
-								<img className='w-14 h-14' src={coffee.img} />
+								<img className='w-14 h-14' src={coffee.img} alt=""/>
 								<div className=''>
 									<h2 className='font-bold' >{coffee.name}</h2>
 									<p >Paquete de café, 250gr</p>
@@ -47,4 +43,4 @@ const Cart_Section = () => {
 	</section>)
 }
 
-export default Cart_Section;
+export default CartSection;

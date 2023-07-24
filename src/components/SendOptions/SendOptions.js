@@ -5,7 +5,7 @@ import { CartContext } from "../../Context/Cart_context";
 
 const SendOptions = () => {
 
-	const { typeShipment, setTypeShipment, onShipmentValue } = useContext(CartContext);
+	const { typeShipment,  onShipmentValue } = useContext(CartContext);
 	return (
 
 		<div className="chooseSendingOption space-y-6">
@@ -14,7 +14,7 @@ const SendOptions = () => {
 
 			<div className='flex justify-between '>
 				<div className='flex gap-5'>
-					<input id="freeSend" type="radio" name="typeOfSend" value="0" onChange={onShipmentValue} checked={typeShipment === "0"} />
+					<input id="freeSend" type="radio" name="typeOfSend" className="accent-green-700" value="0" onChange={onShipmentValue} checked={typeShipment === "0"} />
 
 					<label >
 						<p > Envío 5-7días</p>
@@ -31,7 +31,7 @@ const SendOptions = () => {
 
 			<div className='flex justify-between py-6 '>
 				<div className='flex gap-5'>
-					<input type="radio" className="bg-custom-green" name="typeOfSend" value="9" onChange={onShipmentValue} checked={typeShipment === "9"} />
+					<input type="radio" className="bg-custom-green accent-green-700" name="typeOfSend" value="9" onChange={onShipmentValue} checked={typeShipment === "9"} />
 					<label   >
 						<p className='' >Envío urgente 24h</p>
 						<p >Recibe tu pedido en las siguientes 24h (Para pedidos realizados

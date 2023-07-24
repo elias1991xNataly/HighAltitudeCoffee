@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import axios from 'axios';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 import { NavLink } from 'react-router-dom';
@@ -10,20 +7,10 @@ import { CartContext } from '../../Context/Cart_context';
 
 
 const NavBar = () => {
-	const coffeeUrl = "http://localhost:5050/coffee";
-	const [coffee, setCoffee] = useState();
 	const { lengthOfCoffeesInCart } = useContext(CartContext);
 
 
-	const getData = async () => {
-		const coffees = []
-		const data = await getDocs(collection(db, "Coffee"));
-		data.forEach(coffee => {
-			const realData = coffee.data()
-			coffees.push(realData)
-		})
-		return coffees
-	}
+	
 
 
 	// useEffect(() => {
@@ -34,7 +21,7 @@ const NavBar = () => {
 	return (<nav className='bg-custom-black text-white '>
 		<div className='flex justify-around p-3 items-center'>
 			{/* <div className='flex p-3 gap-1 space-x-6 items-center'> */}
-				<NavLink className="goHome flex position-relative  flex flex-row items-center " to="/"> <p className="goHome items-center flex justify-start position-relative gap-1.5 space-x-6">cafedealtura.com <b> <img src="./images/ps_coffee-hot.png" /></b></p></NavLink>
+				<NavLink className="goHome flex position-relative  flex flex-row items-center " to="/"> <p className="goHome items-center flex justify-start position-relative gap-1.5 space-x-6">cafedealtura.com <b> <img src="./images/ps_coffee-hot.png" alt=""/></b></p></NavLink>
 			{/* </div> */}
 			{/* <div className="splitter flex justify-around position-relative items-center space-x-6"> */}
 				<NavLink to="/shop">

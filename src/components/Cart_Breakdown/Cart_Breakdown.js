@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../Context/Cart_context';
-import CkeckoutAndKeepBuying from '../CkeckoutAndKeepBuying/CkeckoutAndKeepBuying';
 
-const Cart_Breakdown = () => {
+const CartBreakdown = () => {
 	const { sumPriceOfAllCoffees, typeShipment, totalCart } = useContext(CartContext);
-	return (<div className=" flex flex-col p-5  space-y-6">
+	return (<div className=" flex flex-col p-5  space-y-6 flex-wrap content-start">
 		<h3 className='font-bold'>Total del Carrito</h3>
 		<div className="line"></div>
 		<div className="subtotalInEuros flex justify-around space-x-24">
@@ -29,4 +27,4 @@ const Cart_Breakdown = () => {
 	</div>)
 }
 
-export default Cart_Breakdown;
+export default CartBreakdown;

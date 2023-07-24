@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { CartContext } from '../../Context/Cart_context';
 import { Link } from 'react-router-dom';
 
-const Success_section = () => {
+const SuccessSection = () => {
 	const { clearCart,sumPriceOfAllCoffees, typeShipment, totalCart, cartCoffee } = useContext(CartContext);
 
 	function randomXToY(minVal, maxVal) {
@@ -81,4 +81,4 @@ const Success_section = () => {
 }
 
 
-export default Success_section;
+export default SuccessSection;
