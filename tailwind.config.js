@@ -11,17 +11,6 @@ module.exports = {
         'custom-graylighter':'#E9E9E9'
       }
     },
-  },
-  plugins: [
-  //   function ({addUtilities}) {
-  //     const extendUnderline = {
-  //         '.underline': {
-  //             'textDecoration': 'underline',
-  //             'text-decoration-color': 'lime',
-  //         },
-  //     }
-  //     addUtilities(extendUnderline)
-  // }
-  ],
+  }
 }
 
