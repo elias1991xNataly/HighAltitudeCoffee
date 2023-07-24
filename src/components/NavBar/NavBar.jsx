@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase/config';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../Context/Cart_context';

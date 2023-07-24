@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/config';
-import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import CoffeeCart, { CartContext } from '../../Context/Cart_context';
 
 
 const LastOrigins = () => {
-	const coffeeUrl = "http://localhost:5050/coffee";
 	const [coffee, setCoffee] = useState();
-	let { cartCoffee, addToCartIfItsNoRepeated, setCartCoffee } = useContext(CartContext);
+	let { cartCoffee, addToCartIfItsNoRepeated} = useContext(CartContext);
 
 	const getData = async () => {
 		const coffees = []

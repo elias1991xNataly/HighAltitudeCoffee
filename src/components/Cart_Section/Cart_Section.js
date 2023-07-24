@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContext, useState } from 'react';
+import { useContext} from 'react';
 import { CartContext } from '../../Context/Cart_context';
 import SendOptions from '../SendOptions/SendOptions';
 
