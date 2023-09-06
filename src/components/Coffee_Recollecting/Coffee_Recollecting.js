@@ -25,7 +25,7 @@ const CoffeeRecollecting = () => {
 
 
 
-                <img className=" rounded-2xl" alt="" src="https://s3-alpha-sig.figma.com/img/a303/6137/8668558bbdbaf8f6c6c4062d03e662e5?Expires=1690156800&Signature=gUYLLx5Ke29hsgiRhXHJp1ZL7BTkfSpPcR6MZU7x9sEgNiebrPDBNy0uWaGS1FV1V2yc3GD-o8WoKhVnEPysrwtwvLRf7LCv6B-dVgjAgiN4lD1IPgWGBQt7c09cv0zvMRhKF9V9pUoa3yDmULK7eeCQLymMND-GXwgzFw5L0UjKPsp8SOViQFoV6mdlLkN4tzpKRElDePl1i-4DfUo5JmmMgn52kLpDDGy~k3zK5TERqy-iIppGh5FVTRPVWe4dWXv~aJGATlUurz~JRmJl9gR2JNTk5g8aN9v20Vs4z98eNiTICna97dqTPg4-N7qYYIWOfu72iM8A911vcYz1OQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
+                <img className=" rounded-2xl" alt="" src="https://s3-alpha-sig.figma.com/img/a303/6137/8668558bbdbaf8f6c6c4062d03e662e5?Expires=1694995200&Signature=eyzdhjLGovgnN60AnVNbRQ3NR21vnSJHm3Qaqp67~Hg6xbJ9O2OSLohUfRU7LQNTTI9lEehTM3KCj6wqfgLorUCn4m99mWwxvTMXU77Abqn2YqRV5OLyTLrglYFbl0AS0tUdhiXA9Ecn7cTnuFtuj2ZYSgKhH3DzKBjGdxujFl4RuPr6A3pVJ0imdUE26ryYq30YvhAvHxGjZPD3TfF51s-CwarCcuayj5yLZ-Fapcua~CBUAS3ZIabOAbEIrlrNDxozKUAItXK-HjcdvscV64ndQz-hHbQfXzbAyyR3t7AL~DTApPMYFxb8Wgs3VOq~ptlYOmb9O8NF6c9FBHNfHw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" />
             </div>
         </section>
 
